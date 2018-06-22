@@ -4,10 +4,12 @@
 
 ## Main Function
 * The user is able to set the start location as well as the dropping location in the warehouse
-* The user can choose from two different algorithms (nearest-neighbor and brancn-and-bound) to find the shortest path to gather all items in one order
-* The user can bath process all 2,500 orders given in _warehouse-orders-v02.csv_ and return the result as a text file
+* The user can choose from two different algorithms (nearest-neighbor and brancn-and-bound) to find the shortest path to gather all items in one order and plot the generated shortest path in a graph. The graph of one particular order is shown down below:
+![alt text](https://github.com/guangpeili/Warehouse_Items_Pick-Up_Nevigating_Java/blob/master/pathGraph.png)
+* The user can bath process all 2,500 orders given in _warehouse-orders-v02.csv_ and return the result as a text file. The result stored in a txt file is shown below
+![alt text](https://github.com/guangpeili/Warehouse_Items_Pick-Up_Nevigating_Java/blob/master/batchProcess.png)
 * The user can reorder all the 2,500 orders by setting a weight limit and number-of-items limit for a single order. Therefore, some orders will be joined together and some else might be splited into two or more orders
-* This programs is able to plot the generated shortest path in a graph
+
 
 ## Libraries Used 
 1. [**_OpenCSV_**](http://opencsv.sourceforge.net), which is used to read data fro given csv files
@@ -28,5 +30,7 @@
 6. _Test.java_: Process one single order and print the path in a graph
 7. _Reordering.java_: This is for the reordering of all orders by setting a weight and number limit
 
-
+## Bugs & Glitches
+1. After the number of items in one single order exceeds 15, using branch-and-bound to obtain the shortes path can be extremely time consuming, and in most cases the memory will run out (I'm using a Macbook with 8GB Ram)
+2. In item details, we are still missing weight information of a lot of items. So the total weight and total effort may not display normally
 
