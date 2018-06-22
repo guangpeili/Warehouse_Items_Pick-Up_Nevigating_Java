@@ -2,6 +2,13 @@
 * This repository contains a Java program which is able to find the shortest path in a warehouse with multiple items to be picked up
 * The file which contains layout of the warehouse, the positions of all items and the details of those items will be given and explained later in this Markdown file
 
+## Main Function
+* The user is able to set the start location as well as the dropping location in the warehouse
+* The user can choose from two different algorithms (nearest-neighbor and brancn-and-bound) to find the shortest path to gather all items in one order
+* The user can bath process all 2,500 orders given in _warehouse-orders-v02.csv_ and return the result as a text file
+* The user can reorder all the 2,500 orders by setting a weight limit and number-of-items limit for a single order. Therefore, some orders will be joined together and some else might be splited into two or more orders
+* This programs is able to plot the generated shortest path in a graph
+
 ## Libraries Used 
 1. [**_OpenCSV_**](http://opencsv.sourceforge.net), which is used to read data fro given csv files
 2. [**_Commons-lang3_**](https://commons.apache.org/proper/commons-lang/), which is required for running the **_OpenCSV_** library
@@ -12,7 +19,14 @@
 2. _item-details.csv_: This csv file contains the information of dimension (length, width, and height) and weight of selected items. Note that we are still missing the details of a large portion of all items
 3. _warehouse-grid.csv_: This csv file tells where each item is located in the warehouse
 
-
+## Source Code Explination
+1. _Node.java_: This is the class which represents girds in the warehosue. It can tell whether there is a shelf on that particular node (whether it is blocked). And it also contains the _f_, _g_, _h_ values which are used in the A* search
+2. _Matrices.java_: This is used for reducing matrices in branch-and-bound algorithm
+3. _CsvWriter.java_: This is for generating the text files
+4. _BnbBatch.java_: Batch processing using branch-and-bound
+5. _ShortestPathBatch.java_: Batch processing using nearest neighbor
+6. _Test.java_: Process one single order and print the path in a graph
+7. _Reordering.java_: This is for the reordering of all orders by setting a weight and number limit
 
 
 
