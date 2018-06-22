@@ -4,7 +4,7 @@
 
 ## Main Function
 * The user is able to set the start location as well as the dropping location in the warehouse
-* The user can choose from two different algorithms (nearest-neighbor and brancn-and-bound) to find the shortest path to gather all items in one order and plot the generated shortest path in a graph. The graph of one particular order is shown down below:
+* The user can choose from two different algorithms (nearest-neighbor and brancn-and-bound) to find the shortest path to gather all items in one order and plot the generated shortest path in a graph. The graph of one particular order is shown down below (red block means starting and dropping location for workers, blue block means the items waited to be picked up is on this shelf, and the yellow trail means the generated shortest path):
 
 ![alt text](https://github.com/guangpeili/Warehouse_Items_Pick-Up_Nevigating_Java/blob/master/pathGraph.png)
 
